@@ -1,20 +1,25 @@
 import java.util.Scanner;
 
-    public class Pemilihan2Percobaan1 {
+public class Pemilihan2Percobaan1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        public static void main(String[] args) {
-            Scanner asla = new Scanner(System.in);
-            int tahun;
+        int tahun;
+        System.out.print("Masukkan Tahun : ");
+        tahun = sc.nextInt();
 
-            System.out.print("Masukkan Tahun");
-            tahun = asla.nextInt();
-            
-            if ((tahun % 4) == 0) {
-                if ((tahun % 100) != 0)
+        if (tahun % 4 == 0) {
+            if (tahun % 100 == 0) {
+                if (tahun % 400 == 0) {
                     System.out.println("Tahun Kabisat");
-
-            } else
-                System.out.println("Bukan Tahun Kabisat");
+                } else {
+                    System.out.println("Bukan Tahun Kabisat");
+                }
+            } else {
+                System.out.println("Tahun Kabisat");
+            }
+        } else {
+            System.out.println("Bukan Tahun Kabisat");
         }
-    
+    }
 }
